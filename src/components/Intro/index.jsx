@@ -7,9 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const index = () => {
-  const [task, setTask] = useState([
-    // {id: 1, taskTitle: "lorem ipsum dolor", taskDeadline: "21.03.2001"},
-  ]);
+  const [task, setTask] = useState([]);
 
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDeadline, setTaskDeadline] = useState("");
@@ -33,7 +31,7 @@ const index = () => {
     } else {
       setTask([...task, newTask]);
       toast.success("Muvaffaqqiyatli qo'shildi", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 1500,
       });
     }
@@ -43,6 +41,9 @@ const index = () => {
 
   };
     const deleteTask = (id) => {
+      toast.info("Ma'lumot o'chirildi", {
+        autoClose: 1500
+      })
       const newTasks = task.filter((el) => {
         return el.id != id;
       })
