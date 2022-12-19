@@ -16,13 +16,13 @@ export const Header = () => {
               <NavLink to="/task" className={({isActive}) => isActive ? "text-dark text-decoration-none" : "text-white text-decoration-none"}>Task</NavLink>
             </li>
             <li className="nav__list--item">
-              <a href="#" className="nav__list--item-link">Link3</a>
+              <NavLink to="/adduser" className={({isActive}) => isActive ? "text-dark text-decoration-none fw-bold" : "text-white text-decoration-none fw-bold"}>Add user</NavLink>
             </li>
             <li className="nav__list--item">
-              <a href="#" className="nav__list--item-link">Link4</a>
+              <NavLink to="/userlist" className={({isActive}) => isActive ? "text-dark text-decoration-none fw-bold" : "text-white text-decoration-none fw-bold"}>User list</NavLink>
             </li>
             <li className="nav__list--item">
-              <a href="#" className="nav__list--item-link">Link5</a>
+              <NavLink to="/link5" className={({isActive}) => isActive ? "text-dark text-decoration-none fw-bold" : "text-white text-decoration-none fw-bold"}>Link5</NavLink>
             </li>
           </ul>
         </nav>
